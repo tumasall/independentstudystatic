@@ -1,0 +1,321 @@
+
+
+#wrapper {
+  background: #fff;
+  padding: 20px 0 40px;
+}
+
+#map-container {
+  margin: 0 auto;
+  width: 50%;
+  position: relative;
+  font-family: Play, sans-serif;
+  text-align: center;
+  color: #0066FF;
+}
+#map-container a {
+  display: block;
+  text-decoration: none;
+  color: #0066FF;
+}
+#map-container a:hover {
+  opacity: .5;
+  transition: all 1s ease;
+}
+#map-container a:visited {
+  color: #0066FF;
+}
+
+/* ************************ */
+/* caption styling */
+#map-caption {
+  transition: all 1s ease;
+  position: absolute;
+  bottom: 80px;
+  width: 100%;
+  margin: 0 auto;
+  text-shadow: -1px 1px 8px #eee, 1px -1px 8px #eee;
+}
+
+/* caption fade in / out */
+.fade {
+  transition: all 1s ease;
+}
+
+.in {
+  opacity: 1;
+}
+
+.out {
+  opacity: 0;
+}
+
+/* ************************ */
+/* countries styling */
+.st0 {
+  fill: #818A97;
+}
+
+.st1 {
+  transition: all 1s ease;
+  fill: #0066FF;
+  opacity: .8;
+}
+.st1:hover {
+  opacity: 1;
+}
+
+.st2 {
+  transition: all 1s ease;
+  fill: #660066;
+  opacity: .8;
+}
+
+.st2:hover {
+  opacity: 1;
+}
+
+
+/*SLIDER*/
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC);
+body {
+  background: #fff;
+}
+
+/*wrapper that holds both of the images*/
+div#comparison {
+  height: 40vw;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  font-family: 'Amatic SC', cursive;
+}
+
+/*The right image*/
+div#comparison #original {
+  background: url(http://4.bp.blogspot.com/-jkOGsbTNt_4/VMdQLCdZaJI/AAAAAAAAEhg/1e3qAVDlft8/s1600/Top%2B5%2BMost%2BBeautiful%2BBuildings%2Bin%2BSaudi%2BArabia%2B02.jpg) right no-repeat;
+  background-size: 1500px;
+  position: absolute;
+  display: block;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+div#comparison #original h1 {
+  position: absolute;
+  color: #9BB3D7;
+  z-index: auto;
+  top: 0;
+  bottom: 0;
+  right: 20vw;
+  margin: auto 0;
+  height: 1em;
+  font-size: 10em;
+}
+
+/*The left image container which holds the left image*/
+div#comparison #changed {
+  margin: 0;
+  width: 90%;
+  /*Set the starting position of the angle*/
+  height: 100%;
+  overflow: hidden;
+  display: inline-block;
+  border-right: 20px solid #B5482A;
+  background: #A79020;
+  transform: skewX(-30deg) translate(-35vw);
+  /*Skew the image for the angle and move #changed so you don't see the left angle*/
+}
+div#comparison #changed div {
+  background: url(http://previews.123rf.com/images/swisshippo/swisshippo1105/swisshippo110500045/9565472-Mosque-in-the-desert-near-Riyadh-city-Saudi-Arabia-Stock-Photo.jpg) center left no-repeat;
+  background-size: auto 100%;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: screen;
+  transform: skewX(30deg) translate(35vw);
+  /*Make the image square and translate it back so that it matchs the right image*/
+}
+div#comparison #changed h1 {
+  position: absolute;
+  color: #9BB3D7, 10;
+  z-index: 9999;
+  top: 0;
+  bottom: 0;
+  left: 20vw;
+  margin: auto 0;
+  height: 1em;
+  font-size: 10em;
+}
+
+/*
+RANGE STYLE
+*/
+input[type=range] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  top: -5em;
+  left: -2%;
+  background-color: rgba(155, 179, 215, 0.2);
+  width: 102%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]:active {
+  outline: none;
+}
+input[type=range]::-moz-range-track {
+  -moz-appearance: none;
+  height: 55px;
+  width: 98%;
+  background-color: rgba(155, 179, 215, 0.2);
+  position: relative;
+  outline: none;
+}
+input[type=range]::active {
+  border: none;
+  outline: none;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 50px;
+  height: 50px;
+  background: #9BB3D7;
+  border-radius: 50%;
+}
+input[type=range]::-moz-range-thumb {
+  -moz-appearance: none;
+  width: 50px;
+  height: 50px;
+  background: #9BB3D7;
+  border-radius: 50%;
+}
+input[type=range]:focus::-webkit-slider-thumb {
+  background: #9BB3D7;
+}
+input[type=range]:focus::-moz-range-thumb {
+  background: #9BB3D7;
+}
+
+/*slideshow*/
+div#carousel {
+  perspective: 1200px;
+  background: #fff;
+  padding-top: 10px;
+  font-size:0;
+  margin-bottom: 3rem;
+  overflow: hidden;
+}
+figure#spinner {
+  transform-style: preserve-3d;
+  height: 300px;
+  transform-origin: 50% 50% -500px;
+  transition: 1s;
+}
+figure#spinner img {
+  width: 40%; max-width: 425px;
+  position: absolute; left: 30%;
+  transform-origin: 50% 50% -500px;
+  outline:1px solid transparent;
+}
+figure#spinner img:nth-child(1) { transform:rotateY(0deg);
+}
+figure#spinner img:nth-child(2) { transform: rotateY(-45deg); }
+figure#spinner img:nth-child(3) { transform: rotateY(-90deg); }
+figure#spinner img:nth-child(4) { transform: rotateY(-135deg); }
+figure#spinner img:nth-child(5){ transform: rotateY(-180deg); }
+figure#spinner img:nth-child(6){ transform: rotateY(-225deg); }
+figure#spinner img:nth-child(7){ transform: rotateY(-270deg); }
+figure#spinner img:nth-child(8){ transform: rotateY(-315deg); }
+div#carousel ~ span {
+  color: #000;
+  margin: 5%;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2rem;
+  transition: 0.6s color;
+  position: relative;
+  margin-top: -6rem;
+  border-bottom: none;
+  line-height: 0; }
+div#carousel ~ span:hover { color: #000; cursor: pointer; }
+
+/*voting*/
+@import "https://fonts.googleapis.com/css?family=Montserrat";
+body {
+  background: #fff;
+  font-family: 'Montserrat', sans-serif
+}
+
+form {
+  margin: 40px 0 0
+}
+
+input[type=submit] {
+  margin: 15px 0 0 20px;
+  padding: 8px;
+  border: 1px solid #0066FF;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif
+}
+
+.chart-h {
+  width: 440px;
+  display: inline-block;
+  max-width: calc(100vw - 40px)
+}
+
+.chart {
+  margin: 40px 20px 0;
+  min-height: 230px;
+  border-bottom: 2px solid grey;
+  -webkit-display: flex;
+  -webkit-align-items: flex-end;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  overflow: hidden
+}
+
+.bar {
+  width: calc(25% - 20px);
+  height: 2px;
+  transition: all 1s;
+  color: #fff;
+  padding-top: 10px;
+  font-size: 13px
+}
+
+.graph {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 100%;
+  background: #000080;
+  -webkit-transform: rotate(-90deg);
+  margin: 40px 0 -10px 20px;
+  display: inline-block;
+  vertical-align: bottom
+}
+
+.graph:after {
+  position: absolute;
+  content: '';
+  background: #d2d2d2;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  top: 50px;
+  left: 50px
+}
+
+.pie {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  clip: rect(100px, 200px, 200px, 0px);
+  transition: all 1s
+}
